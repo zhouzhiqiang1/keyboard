@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="YDEmojiCell" id="Sno-c8-aeb" customClass="YDEmojiCell">
+            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😄" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hn8-R0-YVF">
+                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emoji_del_normal" translatesAutoresizingMaskIntoConstraints="NO" id="i1W-vP-03k">
+                        <rect key="frame" x="6" y="9" width="28" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="lcj-w3-Mfq"/>
+                            <constraint firstAttribute="width" constant="28" id="xFx-zK-ktB"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="hn8-R0-YVF" secondAttribute="bottom" id="43Z-uF-Xu7"/>
+                <constraint firstItem="i1W-vP-03k" firstAttribute="centerY" secondItem="Sno-c8-aeb" secondAttribute="centerY" id="7h6-U6-X4a"/>
+                <constraint firstItem="hn8-R0-YVF" firstAttribute="leading" secondItem="Sno-c8-aeb" secondAttribute="leading" id="Xmr-Wo-M1b"/>
+                <constraint firstAttribute="trailing" secondItem="hn8-R0-YVF" secondAttribute="trailing" id="nuE-6d-bQ4"/>
+                <constraint firstItem="i1W-vP-03k" firstAttribute="centerX" secondItem="Sno-c8-aeb" secondAttribute="centerX" id="qNe-Kf-eTz"/>
+                <constraint firstItem="hn8-R0-YVF" firstAttribute="top" secondItem="Sno-c8-aeb" secondAttribute="top" id="tOq-ys-9qj"/>
+            </constraints>
+            <connections>
+                <outlet property="deleteImageView" destination="i1W-vP-03k" id="gOf-IN-Yhp"/>
+                <outlet property="emojiLabel" destination="hn8-R0-YVF" id="zrT-6d-SyF"/>
+            </connections>
+            <point key="canvasLocation" x="255" y="156"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="emoji_del_normal" width="28" height="22"/>
+    </resources>
+</document>

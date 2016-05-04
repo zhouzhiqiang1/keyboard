@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tE-us-Hmv">
+                                <rect key="frame" x="40" y="40" width="160" height="63"/>
+                                <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="KUG-q7-kLi"/>
+                                </constraints>
+                                <state key="normal" title="评论"/>
+                                <connections>
+                                    <action selector="onCommentsBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UkX-nC-Kqd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpC-jb-7yh">
+                                <rect key="frame" x="220" y="40" width="160" height="63"/>
+                                <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="KLo-LV-vVp"/>
+                                </constraints>
+                                <state key="normal" title="回复评论"/>
+                                <connections>
+                                    <action selector="onReplyCommentsBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wrp-pI-GLf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="评论消息显示位置" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glX-yZ-Rmv">
+                                <rect key="frame" x="52" y="164" width="528" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="z5v-7r-3fA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="评论消息：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CF3-Ij-37P">
+                                <rect key="frame" x="52" y="123" width="85" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ZNQ-Et-kFj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="评论消息：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ias-XX-Vyq">
+                                <rect key="frame" x="52" y="254" width="85" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="i0I-IB-dSK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="回复评论消息显示位置" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tM-4O-m6z">
+                                <rect key="frame" x="52" y="295" width="508" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="stR-5Y-AH9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLj-4O-Gpm">
+                                <rect key="frame" x="400" y="40" width="160" height="63"/>
+                                <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="JFq-mS-dYr"/>
+                                </constraints>
+                                <state key="normal" title="清空还原"/>
+                                <connections>
+                                    <action selector="onEmptyBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RlZ-RH-145"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bpC-jb-7yh" firstAttribute="leading" secondItem="3tE-us-Hmv" secondAttribute="trailing" constant="20" id="1XW-Nz-tdo"/>
+                            <constraint firstItem="zLj-4O-Gpm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="4UR-XO-0KF"/>
+                            <constraint firstItem="CF3-Ij-37P" firstAttribute="top" secondItem="3tE-us-Hmv" secondAttribute="bottom" constant="20" id="GKI-OO-SA7"/>
+                            <constraint firstItem="glX-yZ-Rmv" firstAttribute="top" secondItem="CF3-Ij-37P" secondAttribute="bottom" constant="20" id="JOS-kG-WOs"/>
+                            <constraint firstItem="3tE-us-Hmv" firstAttribute="width" secondItem="bpC-jb-7yh" secondAttribute="width" id="KIi-hk-OkY"/>
+                            <constraint firstItem="Ias-XX-Vyq" firstAttribute="top" secondItem="glX-yZ-Rmv" secondAttribute="bottom" constant="20" id="KL2-Mq-SC0"/>
+                            <constraint firstItem="zLj-4O-Gpm" firstAttribute="leading" secondItem="bpC-jb-7yh" secondAttribute="trailing" constant="20" id="Mii-3l-bvi"/>
+                            <constraint firstItem="3tE-us-Hmv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Mod-4O-9r3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5tM-4O-m6z" secondAttribute="trailing" constant="20" id="Ogb-zL-5oE"/>
+                            <constraint firstAttribute="trailing" secondItem="glX-yZ-Rmv" secondAttribute="trailing" constant="20" id="XLx-R2-sVS"/>
+                            <constraint firstItem="Ias-XX-Vyq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="32" id="YBc-OW-S5P"/>
+                            <constraint firstItem="bpC-jb-7yh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="YfV-zj-kOK"/>
+                            <constraint firstItem="5tM-4O-m6z" firstAttribute="top" secondItem="Ias-XX-Vyq" secondAttribute="bottom" constant="20" id="ZK0-6p-GnP"/>
+                            <constraint firstItem="3tE-us-Hmv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="a9Y-ko-ZzE"/>
+                            <constraint firstItem="CF3-Ij-37P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="32" id="axw-Ug-CHN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zLj-4O-Gpm" secondAttribute="trailing" constant="20" id="gwD-5Y-IU8"/>
+                            <constraint firstItem="zLj-4O-Gpm" firstAttribute="width" secondItem="bpC-jb-7yh" secondAttribute="width" id="o2e-GH-mk1"/>
+                            <constraint firstItem="glX-yZ-Rmv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="52" id="qhU-UV-uN5"/>
+                            <constraint firstItem="5tM-4O-m6z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="32" id="tL4-Bl-Bao"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="labelReplyComments" destination="5tM-4O-m6z" id="O6d-Dl-ZK7"/>
+                        <outlet property="labelTitle" destination="glX-yZ-Rmv" id="i2w-68-ins"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="379" y="410"/>
+        </scene>
+    </scenes>
+</document>

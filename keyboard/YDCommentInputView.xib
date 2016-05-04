@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Zro-qJ-q4R" customClass="YDCommentInputView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="660"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nzf-5f-2q8">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="660"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.32284855769999998" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KIy-zB-6ig">
+                    <rect key="frame" x="0.0" y="440" width="375" height="220"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PHe-Yc-KSq">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <subviews>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nt8-KG-0zM">
+                                    <rect key="frame" x="8" y="7" width="321" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="YXo-M1-2Me"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNu-4O-Irg">
+                                    <rect key="frame" x="337" y="7" width="30" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="SbE-OR-LYw"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="cWe-aT-oWb"/>
+                                        <constraint firstAttribute="height" constant="30" id="eGe-b8-cQE"/>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="zGI-7R-bGG"/>
+                                    </constraints>
+                                    <state key="normal" image="btn_keyboard_emotion"/>
+                                    <connections>
+                                        <action selector="onEmotionButtonAction:" destination="Zro-qJ-q4R" eventType="touchUpInside" id="jco-zB-FFT"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="vNu-4O-Irg" firstAttribute="leading" secondItem="nt8-KG-0zM" secondAttribute="trailing" constant="8" id="278-x7-duJ"/>
+                                <constraint firstItem="nt8-KG-0zM" firstAttribute="leading" secondItem="PHe-Yc-KSq" secondAttribute="leading" constant="8" id="Pz4-IA-pd5"/>
+                                <constraint firstAttribute="height" constant="44" id="VXh-NZ-Ua5"/>
+                                <constraint firstAttribute="trailing" secondItem="vNu-4O-Irg" secondAttribute="trailing" constant="8" id="ZtP-x9-Nr7"/>
+                                <constraint firstItem="vNu-4O-Irg" firstAttribute="top" secondItem="PHe-Yc-KSq" secondAttribute="top" constant="6.5" id="bLE-l2-LM2"/>
+                                <constraint firstItem="vNu-4O-Irg" firstAttribute="centerY" secondItem="PHe-Yc-KSq" secondAttribute="centerY" id="bhf-Dc-JR2"/>
+                                <constraint firstAttribute="trailing" secondItem="vNu-4O-Irg" secondAttribute="trailing" constant="8" id="cuR-Ms-Ixu"/>
+                                <constraint firstItem="nt8-KG-0zM" firstAttribute="top" secondItem="PHe-Yc-KSq" secondAttribute="top" constant="7" id="fib-0j-Rzs"/>
+                            </constraints>
+                        </view>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="EMz-ai-vGM">
+                            <rect key="frame" x="8" y="44" width="359" height="144"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="roX-5T-lgB">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <connections>
+                                <outlet property="dataSource" destination="Zro-qJ-q4R" id="MIn-r3-AZH"/>
+                                <outlet property="delegate" destination="Zro-qJ-q4R" id="Vdz-sN-9ve"/>
+                            </connections>
+                        </collectionView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nuo-oU-zoR">
+                            <rect key="frame" x="311" y="188" width="64" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="64" id="B79-en-FzB"/>
+                                <constraint firstAttribute="height" constant="24" id="YQe-3f-Igd"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="发送"/>
+                            <connections>
+                                <action selector="onSendButtonAction:" destination="Zro-qJ-q4R" eventType="touchUpInside" id="h4c-Uq-Kem"/>
+                            </connections>
+                        </button>
+                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="oZ8-cT-tqP">
+                            <rect key="frame" x="139" y="183" width="96" height="37"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="37" id="CDK-JQ-3FU"/>
+                                <constraint firstAttribute="width" constant="96" id="Z4h-iO-DH2"/>
+                            </constraints>
+                            <color key="pageIndicatorTintColor" red="0.87058823529411766" green="0.87058823529411766" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="currentPageIndicatorTintColor" red="0.31372549020000001" green="0.72941176470000002" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                        </pageControl>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="EMz-ai-vGM" secondAttribute="bottom" constant="32" id="6hP-8a-Tzv"/>
+                        <constraint firstAttribute="trailing" secondItem="EMz-ai-vGM" secondAttribute="trailing" constant="8" id="7K5-4P-93I"/>
+                        <constraint firstAttribute="bottom" secondItem="nuo-oU-zoR" secondAttribute="bottom" constant="8" id="FGG-3e-wDX"/>
+                        <constraint firstAttribute="height" constant="220" id="Mz2-Yn-JZx"/>
+                        <constraint firstItem="EMz-ai-vGM" firstAttribute="leading" secondItem="KIy-zB-6ig" secondAttribute="leading" constant="8" id="PDU-DW-bSZ"/>
+                        <constraint firstAttribute="trailing" secondItem="nuo-oU-zoR" secondAttribute="trailing" id="aS3-rv-4vf"/>
+                        <constraint firstItem="PHe-Yc-KSq" firstAttribute="leading" secondItem="KIy-zB-6ig" secondAttribute="leading" id="fED-Fy-Own"/>
+                        <constraint firstAttribute="bottom" secondItem="oZ8-cT-tqP" secondAttribute="bottom" id="fhT-w1-gri"/>
+                        <constraint firstAttribute="trailing" secondItem="PHe-Yc-KSq" secondAttribute="trailing" id="i1v-iA-G3S"/>
+                        <constraint firstItem="PHe-Yc-KSq" firstAttribute="top" secondItem="KIy-zB-6ig" secondAttribute="top" id="o5O-Y6-fgz"/>
+                        <constraint firstItem="EMz-ai-vGM" firstAttribute="top" secondItem="PHe-Yc-KSq" secondAttribute="bottom" id="uBZ-dc-Adx"/>
+                        <constraint firstItem="oZ8-cT-tqP" firstAttribute="centerX" secondItem="KIy-zB-6ig" secondAttribute="centerX" id="xUh-ga-rhQ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Nzf-5f-2q8" firstAttribute="top" secondItem="Zro-qJ-q4R" secondAttribute="top" id="7M0-SV-WYE"/>
+                <constraint firstAttribute="trailing" secondItem="Nzf-5f-2q8" secondAttribute="trailing" id="Dna-vF-vBM"/>
+                <constraint firstAttribute="bottom" secondItem="Nzf-5f-2q8" secondAttribute="bottom" id="Fm6-34-wrt"/>
+                <constraint firstItem="Nzf-5f-2q8" firstAttribute="leading" secondItem="Zro-qJ-q4R" secondAttribute="leading" id="V0q-3u-nHH"/>
+                <constraint firstItem="KIy-zB-6ig" firstAttribute="leading" secondItem="Zro-qJ-q4R" secondAttribute="leading" id="XiR-FU-gZl"/>
+                <constraint firstAttribute="bottom" secondItem="KIy-zB-6ig" secondAttribute="bottom" id="rRm-0L-IdS"/>
+                <constraint firstAttribute="trailing" secondItem="KIy-zB-6ig" secondAttribute="trailing" id="saS-ib-TGQ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bgView" destination="Nzf-5f-2q8" id="HDT-Hi-RFw"/>
+                <outlet property="collectionView" destination="EMz-ai-vGM" id="dW6-u0-Mhy"/>
+                <outlet property="commentInputTextField" destination="nt8-KG-0zM" id="hkT-90-2IU"/>
+                <outlet property="inputBar" destination="PHe-Yc-KSq" id="GOf-J9-6Sc"/>
+                <outlet property="inputviewHeightConstraint" destination="Mz2-Yn-JZx" id="veQ-r0-Rz6"/>
+                <outlet property="pageControl" destination="oZ8-cT-tqP" id="CzS-rS-okT"/>
+            </connections>
+            <point key="canvasLocation" x="-193.5" y="-51"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_keyboard_emotion" width="30" height="30"/>
+    </resources>
+</document>
